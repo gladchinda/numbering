@@ -3,7 +3,7 @@
  * @param {int} length The length of the string.
  * @return {string} The generated string containing only digits.
  */
-export default (length = 1) => {
+const random = (length = 1) => {
   if (!(Number.isInteger(length) && length > 0)) {
     throw new Error('The length parameter must be an integer greater than 0.');
   }
@@ -12,3 +12,5 @@ export default (length = 1) => {
     .map(() => Math.floor(Math.random() * 10))
     .join('');
 }
+
+module.exports = random;
