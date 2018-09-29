@@ -4,7 +4,7 @@
   "description": "Utilities for formatting and working with numbers in JavaScript.",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "test": "__tests__"
   },
   "scripts": {
     "test": "jest"
