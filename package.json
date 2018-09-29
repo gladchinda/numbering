@@ -13,11 +13,18 @@
     "type": "git",
     "url": "git+https://github.com/gladchinda/numbering.git"
   },
-  "keywords": ["number", "digit", "numbering"],
+  "keywords": [
+    "number",
+    "digit",
+    "numbering"
+  ],
   "author": "Glad Chinda <gladxeqs@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gladchinda/numbering/issues"
   },
-  "homepage": "https://github.com/gladchinda/numbering#readme"
+  "homepage": "https://github.com/gladchinda/numbering#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
 }
