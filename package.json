@@ -1,0 +1,23 @@
+{
+  "name": "numbering",
+  "version": "1.0.0",
+  "description": "Utilities for formatting and working with numbers in JavaScript.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gladchinda/numbering.git"
+  },
+  "keywords": ["number", "digit", "numbering"],
+  "author": "Glad Chinda <gladxeqs@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gladchinda/numbering/issues"
+  },
+  "homepage": "https://github.com/gladchinda/numbering#readme"
+}
