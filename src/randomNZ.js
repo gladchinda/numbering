@@ -3,8 +3,11 @@ const { assertIsNatural } = require('../lib/types');
 
 /**
  * Creates a random string of the given length containing only digits.
- * @param {int} length The length of the string.
+ * 
+ * @param {number} length The length of the string.
+ * 
  * @return {string} The generated string containing only digits.
+ * 
  * @throws {Error}
  */
 module.exports = (length = 1) => {

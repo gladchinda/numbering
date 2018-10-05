@@ -4,9 +4,12 @@ const { assertIsNatural } = require('../lib/types');
 
 /**
  * Creates a random string of the given length containing only digits.
- * @param {int} length The length of the string.
- * @param {bool} nzFirst Flag that determines whether the sequence must start with non-zero digit.
+ * 
+ * @param {number} length The length of the string.
+ * @param {boolean} nzFirst Flag that determines whether the sequence must start with non-zero digit.
+ * 
  * @return {string} The generated string sequence containing only digits.
+ * 
  * @throws {Error}
  */
 module.exports = (length = 1, nzFirst = false) => {
