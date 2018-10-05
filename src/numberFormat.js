@@ -1,4 +1,4 @@
-const { isNumber } = require('../lib/types');
+const { isNumber, isWhole } = require('../lib/types');
 
 /**
  * Returns the numerically formatted representation of the specified number with
@@ -20,8 +20,7 @@ const { isNumber } = require('../lib/types');
 module.exports = (value, precision = 0) => {
 
   // Resolve precision to a valid value, otherwise use 0
-  precision = +precision;
-  precision = (precision && precision >= 0 && precision) || 0;
+  precision = (isWhole(precision) && precision) || 0;
 
   // Check if value is a number or a string
   if (typeof value === 'string' || isNumber(value)) {

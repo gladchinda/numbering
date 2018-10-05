@@ -22,8 +22,8 @@ describe('numberFormat()', () => {
     const num1 = numberFormat(123456789);
     const num2 = numberFormat('-123,456,789', -5);
     const num3 = numberFormat('1234.56789', null);
-    const num4 = numberFormat(-1234.56789, []);
-    const num5 = numberFormat(Math.PI / Math.E, false);
+    const num4 = numberFormat(-1234.56789, false);
+    const num5 = numberFormat(Math.PI / Math.E, 12.3);
 
     expect(num1).toEqual('123,456,789');
     expect(num2).toEqual('-123,456,789');
