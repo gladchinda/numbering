@@ -1,5 +1,12 @@
 const { isNumber, isWhole } = require('../lib/types');
 
+// Min and Max precisions for number formatting
+const MIN_PRECISION = 0;
+const MAX_PRECISION = 20;
+
+// Regex for matching numeric value
+const NUMERIC_REGEX = /^([-+]?)(\d+)(?:\.(\d+))?$/;
+
 /**
  * Returns the numerically formatted representation of the specified number with
  * thousands separator(,) and decimal places based on the specified precision.
@@ -17,23 +24,20 @@ const { isNumber, isWhole } = require('../lib/types');
  * 
  * @return {string|any}
  */
-module.exports = (value, precision = 0) => {
-
-  // Resolve precision to a valid value, otherwise use 0
-  precision = (isWhole(precision) && precision) || 0;
+module.exports = (value, precision = MIN_PRECISION) => {
 
   // Check if value is a number or a string
   if (typeof value === 'string' || isNumber(value)) {
 
-    // Regex for matching numeric value
-    const NUMERIC_REGEX = /^([-+]?)(\d+)(?:\.(\d+))?$/;
+    // Resolve precision to a valid value, otherwise use 0
+    precision = (isWhole(precision) && precision) || MIN_PRECISION;
 
     // Strip off every non-numeric character from numeric value
     const numeric = String(value).replace(/[^-+.\d]/g, '');
 
     // Normalize the specified value and return the string representation of the normalized number
     // Max allowed precision is 20.
-    const normalized = String(parseFloat(numeric).toFixed(Math.min(precision, 20)));
+    const normalized = String(parseFloat(numeric).toFixed(Math.min(precision, MAX_PRECISION)));
 
     // Check if the normalized number matches a valid number representation
     const matches = normalized.match(NUMERIC_REGEX);
